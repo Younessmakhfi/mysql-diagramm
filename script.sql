@@ -11,6 +11,9 @@
 --
 -- Table structure for table `Client`
 --
+CREATE DATABASE delevery;
+USE delevery;
+
 
 CREATE TABLE `Client` (
   `ClientID` int(11) NOT NULL,
@@ -111,7 +114,8 @@ ALTER TABLE `Delevery_Man`
 ALTER TABLE `Orders`
   ADD CONSTRAINT `Orders_ibfk_1` FOREIGN KEY (`ClientID`) REFERENCES `Client` (`ClientID`);
 COMMIT;
-
+CREATE USER 'youness'@'localhost' IDENTIFIED BY 'Azerty123';
+GRANT ALL ON delevery.* TO 'youness'@'localhost';
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
