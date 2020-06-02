@@ -77,7 +77,14 @@ INSERT INTO `Orders` (`OrderID`, `ClientID`, `OrderName`) VALUES
 --
 -- Indexes for dumped tables
 --
-
+--
+-- Edit data in table
+--
+update Client set PhoneNumber = '0681278128' where ClientID = 1;
+--
+-- Delete data from table
+--
+delete from Client where id = 2;
 --
 -- Indexes for table `Client`
 --
